@@ -40,23 +40,25 @@ namespace mathgame
 
         private static void Add()
         {
-           int max = Menu.Number(); 
-           Random rand = new Random();
-           int first = rand.Next(max);
-           int second = rand.Next(max);
-           int result = first+second;
-           Console.WriteLine($"{first}+{second}=?");
-           var reply = Console.ReadLine();
-           int answer = Convert.ToInt32(reply);
-           if(answer == result)
-           {
-               Console.WriteLine("Bra, det var rätt!");
-           }
-           else
-           {
-               Console.WriteLine($"Tyvärr, {answer} var fel. Rätt svar var {result}.");
-           }
-           Console.Read();
+            int max = Menu.Number();
+            for (int i = 0; i < 60; i++)
+            {
+                Random rand = new Random();
+                int first = rand.Next(max);
+                int second = rand.Next(max);
+                int result = first + second;
+                Console.WriteLine($"{first}+{second}=?");
+                var reply = Console.ReadLine();
+                int answer = Convert.ToInt32(reply);
+                if (answer == result)
+                {
+                    Console.WriteLine("Bra, det var rätt!");
+                }
+                else
+                {
+                    Console.WriteLine($"Tyvärr, {answer} var fel. Rätt svar var {result}.");
+                }
+            }
         }
 
         private static void Subtract()
