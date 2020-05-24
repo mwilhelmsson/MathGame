@@ -4,15 +4,11 @@ namespace mathgame
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            bool run = false;
-            while(!run)
+            
+            while(Game.Run())
             {
-                int method = Menu.Choices("Addition", "Subtraktion", "Multiplikation", "Division");
-                if(method == -1)
-                    return;
-                
             }
         }
     }
